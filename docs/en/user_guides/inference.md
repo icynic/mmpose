@@ -111,11 +111,15 @@ The inferencer provides several methods that can be used to customize the models
 
 ```python
 
-# build the inferencer with model alias
+# build the inferencer with 2D model alias
 inferencer = MMPoseInferencer('human')
+# build the inferencer with 3D model alias
+inferencer = MMPoseInferencer(pose3d="human3d")
 
-# build the inferencer with model config name
+# build the inferencer with 3D model config name
 inferencer = MMPoseInferencer('td-hm_hrnet-w32_8xb64-210e_coco-256x192')
+# build the inferencer with 3D model config name
+inferencer = MMPoseInferencer(pose3d="motionbert_dstformer-ft-243frm_8xb32-120e_h36m")
 
 # build the inferencer with model config path and checkpoint path/URL
 inferencer = MMPoseInferencer(
